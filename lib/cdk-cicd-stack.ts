@@ -11,11 +11,11 @@ export class CdkCicdStack extends cdk.Stack {
         input: CodePipelineSource.gitHub('bkuhlen73/cicd-practice', 'main'),
         commands: [
           'ls -la',
-          'cd cdk-cicd',
+          //'cd cdk-cicd',
           'npm ci',
           'npx cdk synth'
         ],
-        primaryOutputDirectory: 'cdk-cicd/cdk.out'
+        primaryOutputDirectory: 'cdk.out'
       })
     })
   }
